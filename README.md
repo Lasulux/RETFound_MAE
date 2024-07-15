@@ -1,3 +1,13 @@
+# Below this section is the original readme file from RETFound_MAE. In this section we record our own notes.
+
+latest experimentation is in the training.ipynb
+
+Practice materials, tests, original unused py files are in the legacy folder
+The logs folder contain history of training info for tensorboard visualization
+output_dir is currently deprecated
+The RETFound_oct_weights.h5 file has to be downloaded from the original repo and kept in base working directory
+The datasets are public, IDRiD_data and OIMHS dataset folders are in a data folder in the base working directory
+
 # RETFound_MAE (Official Keras Implementation)
 
 ## Release notes
