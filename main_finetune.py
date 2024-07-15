@@ -20,6 +20,7 @@ from scheduler import WarmUpCosine
 
 import tfimm
 from models_vit import *
+import my_args
 
 
 def parse_option():
@@ -42,9 +43,9 @@ def parse_option():
                         help='weight decay (default: 1e-4)')
 
     # Dataset parameters
-    parser.add_argument('--data_path', default='/data/yuka/projects/RETFound_MAE/data/', type=str,
+    parser.add_argument('--data_path', default='./data/IDRiD_data', type=str,
                         help='dataset path')
-    parser.add_argument('--nb_classes', default=1000, type=int,
+    parser.add_argument('--nb_classes', default=5, type=int,
                         help='number of the classification types')
 
     parser.add_argument('--output_dir', default='./output_dir/',
@@ -333,11 +334,13 @@ def main(opt):
     atexit.register(strategy._extended._collective_ops._pool.close) # Close multiprocessing ThreadPool for MirroredStrategy (this is necessary some combination of TF and python (e.g. TF2.7 with Py3.9))
 
 
-
 if __name__ == '__main__':
 
     opt = parse_option()
 
+    # load_my_arguments=True
+    # if load_my_arguments:
+    #     opt = my_args.load_my_args(opt)
     # Setting seeds for reproducibility.
     SEED = 42
     tf.keras.utils.set_random_seed(SEED)
