@@ -2,4 +2,4 @@ data
 model
 *.h5
 logs
-data_filtering.py
+data_splitting.py
