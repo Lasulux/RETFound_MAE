@@ -2,6 +2,8 @@
 
 latest experimentation is in the training.ipynb
 
+**CFP !!!:  Check file names. I had to save CSV as XLSX and rename some folders. Maybe unnecessary but current code runs like this...**
+
 Practice materials, tests, original unused py files are in the legacy folder
 The logs folder contain history of training info for tensorboard visualization
 output_dir is currently deprecated
